@@ -1,8 +1,6 @@
 import React from 'react'
 import {
     BrowserRouter as Router,
-    Switch,
-    Route,
     Link
   } from "react-router-dom";
   
@@ -12,16 +10,16 @@ export default function Header() {
         <Router>
         <div className="header-container header">
             <Link to ="/">
-         <img className="logo" src="assets/images/logo.svg"/> 
+         <img className="logo" src="assets/images/logo.svg" alt=""/> 
         </Link>
 
-        <a href="https://themewagon.com/themes/project-app-showasing-onepage-bootstrap-template-free/">
+        <Link to="/https://themewagon.com/themes/project-app-showasing-onepage-bootstrap-template-free/">
             <button className="header-btn"> Download FREE!</button>
-        </a>
+        </Link>
         <div className="header-right">
-            <a className="navbar-item" href="#team">The Team</a>
-            <a className="navbar-item" href="#pricing">Pricing</a>
-            <Link to = "/features" className="navbar-item" >Features
+            <Link  to="/#team" className="navbar-item">The Team</Link>
+            <Link  to="/#pricing" className="navbar-item">Pricing</Link>
+            <Link to = "/#features" className="navbar-item" >Features
             </Link>
         </div>
     </div>

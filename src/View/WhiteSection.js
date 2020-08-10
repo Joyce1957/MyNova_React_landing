@@ -6,7 +6,7 @@ export default function WhiteSection() {
         <div className="white-section row">
 
     <div className="imac col-sm-6">
-        <img className="imac-screen img-responsive" src="assets/images/imac.png" />
+        <img className="imac-screen img-responsive" src="assets/images/imac.png" alt=""/>
     </div>
 
     <WhiteText 
