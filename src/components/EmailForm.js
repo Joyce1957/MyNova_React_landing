@@ -2,10 +2,24 @@ import React, {useState} from 'react'
 
 
 export default function EmailForm(props) {
+ 
+    const encode = (data) => {
+        return Object.keys(data)
+            .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+            .join("&");
+      }
+
     const [item, setItem] = useState('');
-    const handleSubmit = (e) =>{
-        e.preventDefault()
-        alert(`Submitting Name ${item}`)
+    const handleSubmit = (e) => {
+        fetch("/", {
+            method: "POST",
+            headers: { "Content-Type": "application/x-www-form-urlencoded" },
+            body: encode({ "form-name": "contact", ...this.item })
+          })
+            .then(() => alert("Success!"))
+            .catch(error => alert(error));
+    
+          e.preventDefault();
     }
 
     return (
