@@ -28,11 +28,11 @@ export default function EmailForm(props) {
          action="mailchimp.php" method="post"
          onSubmit={handleSubmit}>
             <input type="email" 
-            class="form-control email-input" 
+            className="form-control email-input" 
             value={item} 
             id="newsletter-email-input"
             placeholder="Enter your email" 
-            onChange={e=>setItem(e.target.value)}
+            onChange={e => setItem(e.target.value)}
             />
             <button type="submit" className="btn submit-btn">Download</button>
             <div id="newsletter-spinner">

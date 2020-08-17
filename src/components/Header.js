@@ -1,7 +1,9 @@
 import React from 'react'
 import {
     BrowserRouter as Router,
-    Link
+    Link,
+    Route,
+    NavLink
   } from "react-router-dom";
   
 
@@ -13,14 +15,14 @@ export default function Header() {
          <img className="logo" src="assets/images/logo.svg" alt=""/> 
         </Link>
 
-        <Link to="/https://themewagon.com/themes/project-app-showasing-onepage-bootstrap-template-free/">
+        <Route path='/external' component={() => { window.location = 'https://domain.extension/external-without-params'; return null;} }>
             <button className="header-btn"> Download FREE!</button>
-        </Link>
+        </Route>
         <div className="header-right">
-            <Link  to="/#team" className="navbar-item">The Team</Link>
-            <Link  to="/#pricing" className="navbar-item">Pricing</Link>
-            <Link to = "/#features" className="navbar-item" >Features
-            </Link>
+            <NavLink  to="/#team" className="navbar-item">The Team</NavLink>
+            <NavLink  to="/#pricing" className="navbar-item">Pricing</NavLink>
+            <NavLink to = "/#features" className="navbar-item" >Features
+            </NavLink>
         </div>
     </div>
     </Router>

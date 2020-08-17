@@ -1,7 +1,9 @@
 import React from 'react'
 import {
     BrowserRouter as Router,
-    Link
+    Switch,
+    Route
+    
   } from "react-router-dom";
 
 export default function HeroSection() {
@@ -12,9 +14,13 @@ export default function HeroSection() {
             <h1 className="header-headline bold"> Beautiful Free Nova template <br /></h1>
             <h4 className="header-running-text light"> A top notch premium quality template for your next
                 web project.</h4>
-            <Link to = "https://themewagon.com/themes/project-app-showasing-onepage-bootstrap-template-free/">
+                <Switch>
+                <Route path='/privacy-policy'
+                 component={() => { window.location.href = 'https://example.com/1234';
+                  return null; }}>
                 <button className="hero-btn"> Download FREE!</button>
-            </Link>
+            </Route>
+            </Switch>
         </div>
 
         <div className="col-sm-6 col-sm-6 ipad">
